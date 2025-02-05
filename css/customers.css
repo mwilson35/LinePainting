@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    color: #222;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0;
+    border-top: 2px solid #FFA500;
+    border-bottom: 2px solid #FFA500;
+}
+
+nav a,
+.dropbtn {
+    color: #222;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    background-color: #FFD700;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFA500;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.8em 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    background: #FFA500;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #FF8C00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Customers Section */
+.customers {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.customers h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+/* Yellow underline for title */
+.customers h2::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 4px;
+    background-color: #FFD700;
+    margin: 0.5em auto;
+}
+
+/* Grid Layout */
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+/* Logo Items */
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    color: #222;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    padding: 0.5em 0;
+    border-top: 2px solid #FFA500;
+    border-bottom: 2px solid #FFA500;
+}
+
+nav a,
+.dropbtn {
+    color: #222;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    background-color: #FFD700;
+    color: #222;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFA500;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.8em 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    background: #FFA500;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #FF8C00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sections */
+/* Keep the image aligned correctly */
+.image-container img {
+    width: 100%;
+    max-width: 700px; /* Prevents oversized images */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    margin: 3em 0;
+}
+
+.team-section .image-container {
+    max-width: 100%;
+    margin: auto;
+}
+
+.team-section .image-container img {
+    width: 100%;
+    max-width: 1300px; /* Prevents the team image from getting too large */
+    height: auto;
+}
+
+/* Keep overall layout structure */
+.intro {
+    display: flex;
+    align-items: flex-start; /* Align text with top of image */
+    max-width: 1200px;
+    margin: 1.5em auto; /* Adjusted margin for better positioning */
+    padding: 1em;
+    gap: 2em;
+}
+
+.intro .text-container {
+    flex: 1.5;
+    margin-top: -0.3em; /* Slight lift without breaking layout */
+}
+
+.intro .text-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+/* Nationwide Section - Align Image and Text Side-by-Side */
+.nationwide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
+    gap: 2em;
+}
+
+.nationwide .text-container {
+    flex: 1;
+    text-align: left;
+}
+
+.nationwide .image-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.nationwide .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Banner */
+.contact-banner {
+    background-color: #FFD700;
+    color: #222;
+    text-align: center;
+    padding: 1.5em 1em;
+    border-radius: 8px;
+}
+
+.contact-banner h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .intro, .services-overview, .nationwide {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ======== Yellow Underlines for Titles ======== */
+/* Center Yellow Line Under "Our Team and Equipment" */
+.team-section h2 {
+    text-align: center; /* Center the text */
+    position: relative;
+}
+
+.team-section h2::after {
+    content: '';
+    display: block;
+    width: 400px; /* Adjust the width if needed */
+    height: 4px;
+    background-color: #FFD700;
+    margin: 0.5em auto 0; /* Center it */
+}
+
+h2, h3 {
+    font-size: 2em;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+h2::after, h3::after {
+    content: '';
+    display: block;
+    width: 460px;
+    height: 4px;
+    background-color: #FFD700;
+    margin-top: 0.5em;
+}
+
+/* Specific sizes for different sections */
+.team-section h2::after {
+    width: 1300px;
+}
+
+.services-overview h2::after {
+    width: 590px;
+}
+
+.nationwide h2::after {
+    width: 330px;   
+}
+
+.contact-banner h3::after {
+    width: 200px;
+}

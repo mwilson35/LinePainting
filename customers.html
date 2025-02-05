@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Customers - Line Painting UK</title>
+  <link rel="stylesheet" href="css/customers.css">
+</head>
+<body>
+  <header>
+    <h1>Our Customers</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Offer</a>
+        <div class="dropdown-content">
+          <a href="warehouse-markings.html">Warehouse Markings</a>
+          <a href="production-plants.html">Production Plants</a>
+          <a href="parking-space-markings.html">Parking Space Markings</a>
+          <a href="sports-facilities.html">Sports Facilities</a>
+          <a href="horizontal-markings.html">Horizontal Markings</a>
+          <a href="removing-horizontal-markings.html">Removing Horizontal Markings</a>
+          <a href="events.html">Events</a>
+        </div>
+      </div>
+      <a href="types-of-markings.html">Types of Markings</a>
+      <a href="about.html">About Us</a>
+
+      <a href="customers.html">Customers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="customers">
+      <h2>Our Customers</h2>
+      <div class="logo-grid">
+        <!-- JS will insert images here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Line Painting UK. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const logoGrid = document.querySelector(".logo-grid");
+        const imageCount = 35; // Total number of images
+        for (let i = 1; i <= imageCount; i++) {
+            const img = document.createElement("img");
+            img.src = `images/customerimages/customer${i}.jpg`; // Corrected Path
+            img.alt = `Customer ${i}`;
+            const div = document.createElement("div");
+            div.classList.add("logo-item");
+            div.appendChild(img);
+            logoGrid.appendChild(div);
+        }
+    });
+</script>
+
+</body>
+</html>

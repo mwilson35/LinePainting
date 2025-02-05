@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    color: #222;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    padding: 0.5em 0;
+    border-top: 2px solid #FFA500;
+    border-bottom: 2px solid #FFA500;
+}
+
+nav a,
+.dropbtn {
+    color: #222;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    background-color: #FFD700;
+    color: #222;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #FFA500;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.8em 1em;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    background: #FFA500;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #FF8C00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+/* Section Styling */
+.marking-types h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+
+.marking-types h2 + .title-underline {
+    width: 360px;
+    height: 4px;
+    background-color: #FFD700;
+    margin: 0.5em auto;
+}
+
+/* Marking Details */
+.marking-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    padding: 1em 0;
+    gap: 1.5em;
+}
+
+.marking-detail .text-container {
+    flex: 1.5;
+    text-align: justify;
+}
+
+.marking-detail .image-container {
+    flex: 1;
+}
+
+.marking-detail img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.marking-detail h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 0.8em;
+    position: relative;
+}
+
+.marking-detail .title-underline {
+    width: 700px;
+    height: 4px;
+    background-color: #FFD700;
+    margin-bottom: 1em;
+}
+
+/* Contact Banner */
+.contact-banner {
+    background-color: #FFD700;
+    color: #222;
+    text-align: center;
+    padding: 1.5em 1em;
+    border-radius: 8px;
+    margin-top: 2em;
+}
+
+.contact-banner p {
+    margin: 0.5em 0;
+}
+
+.contact-banner a {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-banner a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .marking-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .marking-detail .text-container {
+        margin-bottom: 1em;
+    }
+
+    .marking-detail img {
+        max-width: 100%;
+    }
+}

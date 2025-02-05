@@ -1,0 +1,301 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+/* General Header Styling */
+header {
+  background: linear-gradient(to bottom, #FFD700, #FFA500);
+  color: #222;
+  padding: 1.5em 0;
+  text-align: center;
+  position: relative;
+  z-index: 10; /* Ensure header is on top */
+  overflow: visible; /* Prevent clipping */
+}
+
+.header-container {
+  position: relative;
+  z-index: 5; /* Ensure content layers correctly */
+}
+
+/* Navigation Bar */
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensures all items are vertically aligned */
+  background: none;
+  padding: 0.5em 0;
+  border-top: 2px solid #FFA500;
+  border-bottom: 2px solid #FFA500;
+}
+
+nav a, .dropbtn {
+  color: #222;
+  text-decoration: none;
+  margin: 0 1em;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: 'Roboto', Arial, sans-serif;
+  padding: 0.5em 1em;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block; /* Ensures proper vertical alignment */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: flex; /* Matches the alignment of other nav items */
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Places dropdown just below the parent */
+  left: 0;
+  background: #FFA500;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 15;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.8em 1em;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #FFA500;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #FF8C00;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hover Effects */
+nav a:hover, .dropbtn:hover {
+  background-color: #FFD700;
+  color: #222;
+  border-radius: 4px;
+}
+
+
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.intro h2 {
+  font-size: 2.5em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.intro h2::after {
+  content: '';
+  display: block;
+  width: 755px; /* Increased width */
+  height: 4px;
+  background-color: #FFD700;
+  margin: 0.5em auto 0;
+}
+
+.intro p {
+  font-size: 1.2em;
+  text-align: center;
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
+/* Offers Section */
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.offer {
+  text-align: center;
+  max-width: 250px;
+}
+
+.offer img {
+  width: 250px; /* Ensured uniform size */
+  height: 150px; /* Ensured uniform height */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.offer a {
+  color: #0066cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.offer a:hover {
+  color: #004499;
+}
+
+/* Quality Standards Section */
+.quality-standards {
+  background-color: #f9f9f9;
+  padding: 2em;
+  margin-top: 2em;
+}
+
+.quality-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.quality-text {
+  flex: 1;
+}
+
+.quality-text h2 {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.quality-text h2::after {
+  content: '';
+  display: block;
+  width: 490px; /* Increased width */
+  height: 4px;
+  background-color: #FFD700;
+  margin: 0.5em 0 0;
+}
+
+.quality-text p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #444;
+}
+
+.quality-image img {
+  width: 100%;
+  max-width: 500px; /* Ensure image is large but not overwhelming */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 120px/* image and the top content */
+}
+
+/* Why Us Section */
+.why-us {
+  text-align: center;
+  margin: 3em 0;
+}
+
+.why-us h2 {
+  font-size: 2.5em;
+  color: #333;
+  position: relative;
+}
+
+.why-us h2::after {
+  content: '';
+  display: block;
+  width: 150px; /* Increased width */
+  height: 4px;
+  background-color: #FFD700;
+  margin: 0.5em auto 0;
+}
+
+.why-us .trust-title {
+  font-size: 1.5em;
+  color: #333;
+  margin: 1em 0;
+}
+
+.why-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.why-item {
+  text-align: center;
+  width: 150px;
+}
+
+.why-item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5em;
+}
+
+.why-item p {
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 1em 0;
+}
+
+.contact-banner {
+  background-color: #FFD700;
+  color: #222;
+  padding: 1em;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.contact-banner p {
+  margin: 0.5em 0;
+}
+
+.contact-banner a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-banner a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */ 
+@media (max-width: 768px) {
+  .offers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quality-content {
+    flex-direction: column;
+  }
+}

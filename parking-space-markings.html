@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parking Space Markings - Line Painting UK</title>
+  <link rel="stylesheet" href="css/parking.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lightbox = document.querySelector(".lightbox");
+      const lightboxImage = document.querySelector(".lightbox img");
+      const closeBtn = document.querySelector(".lightbox .close");
+      const prevBtn = document.querySelector(".lightbox .prev");
+      const nextBtn = document.querySelector(".lightbox .next");
+      const images = Array.from(document.querySelectorAll(".examples-gallery img"));
+      let currentIndex = 0;
+
+      const showLightbox = (index) => {
+        currentIndex = index;
+        lightboxImage.src = images[currentIndex].dataset.large || images[currentIndex].src;
+        lightbox.classList.add("visible");
+      };
+
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          showLightbox(index);
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        lightbox.classList.remove("visible");
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showLightbox(currentIndex);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showLightbox(currentIndex);
+      });
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+          lightbox.classList.remove("visible");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Parking Space Markings</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Offer</a>
+        <div class="dropdown-content">
+          <a href="warehouse-markings.html">Warehouse Markings</a>
+          <a href="production-plants.html">Production Plants</a>
+          <a href="parking-space-markings.html">Parking Space Markings</a>
+          <a href="sports-facilities.html">Sports Facilities</a>
+          <a href="horizontal-markings.html">Horizontal Markings</a>
+          <a href="removing-horizontal-markings.html">Removing Horizontal Markings</a>
+          <a href="events.html">Events</a>
+        </div>
+      </div>
+      <a href="types-of-markings.html">Types of Markings</a>
+      <a href="about.html">About Us</a>
+      <a href="customers.html">Customers</a>
+
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Intro Section -->
+    <section class="intro-content">
+      <div class="image-container">
+        <img src="images/parking.jpg" alt="Parking Space Markings">
+      </div>
+      <div class="text-container">
+        <h3>Parking Space Markings - Multi-Level Garages</h3>
+        <p>
+          Effective parking space markings improve safety and streamline traffic flow in multi-level garages and parking lots. By implementing clear signage, directional arrows, and designated parking zones, we ensure a safe and organized environment.
+        </p>
+        <a href="contact.html" class="contact-button">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+      <h3>What Our Parking Lot Services Include</h3>
+      <ul>
+        <li>Standard parking space markings</li>
+        <li>Designated spaces for disabled individuals</li>
+        <li>Electric vehicle parking areas</li>
+        <li>Directional signage and arrows</li>
+        <li>Zone and level markings for multi-storey car parks</li>
+        <li>Parking space numbering</li>
+        <li>Safety markings for dead zones and restricted areas</li>
+        <li>Warning stripes on posts and thresholds</li>
+      </ul>
+      <p>
+        We deliver high-quality markings that comply with UK standards while meeting the unique requirements of your facility.
+      </p>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section">
+      <h3>Examples of Parking Space Markings</h3>
+      <div class="examples-gallery">
+        <img src="images/parking1.jpg" data-large="images/parking1.jpg" alt="Parking Example 1">
+        <img src="images/parking2.jpg" data-large="images/parking2.jpg" alt="Parking Example 2">
+        <img src="images/parking3.jpg" data-large="images/parking3.jpg" alt="Parking Example 3">
+        <img src="images/parking4.jpg" data-large="images/parking4.jpg" alt="Parking Example 4">
+        <img src="images/parking5.jpg" data-large="images/parking5.jpg" alt="Parking Example 5">
+        <img src="images/parking6.jpg" data-large="images/parking6.jpg" alt="Parking Example 6">
+        <img src="images/parking7.jpg" data-large="images/parking7.jpg" alt="Parking Example 7">
+        <img src="images/redpark.jpg" data-large="images/redpark.jpg" alt="Parking Example 8">
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+      <span class="close">&times;</span>
+      <span class="prev">&#10094;</span>
+      <img src="" alt="Full-sized example">
+      <span class="next">&#10095;</span>
+    </div>
+  
+    <!-- Contact Section -->
+    <section class="contact-banner">
+      <p>Get in touch for more information:</p>
+      <p>
+        <a href="mailto:linepaintinguk@gmail.com">linepaintinguk@gmail.com</a> | 
+        <a href="tel:+441234567890">+44 1234 567 890</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Line Painting UK. All rights reserved.</p>
+  </footer>
+</body>
+</html>
